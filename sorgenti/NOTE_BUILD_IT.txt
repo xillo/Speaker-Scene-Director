@@ -1,0 +1,18 @@
+SPEAKER SCENE DIRECTOR - Windows x64
+
+Avvio: estrai il pacchetto in una cartella scrivibile e apri SpeakerSceneDirector.exe.
+Il programma e interamente in Rust; non richiede Python o Rust installati per essere eseguito.
+Icona allegata incorporata nel file EXE e nella finestra.
+Configura OBS e TeamSpeak dalle schede dell'applicazione; consulta README.md.
+
+VERIFICHE
+Build release Rust completata per x86_64-pc-windows-gnu.
+Tre test unitari esistenti (core e autenticazione OBS) eseguiti su Linux: tutti passati.
+Formato PE Windows GUI x64, icona con 7 risoluzioni verificata nelle risorse PE.
+Importazioni DLL controllate: solo librerie Windows, nessuna DLL MinGW esterna.
+L'avvio grafico su Windows e l'integrazione live OBS/TeamSpeak non sono stati testati in questo ambiente Linux.
+
+SORGENTI
+La cartella sorgenti contiene il progetto Rust aggiornato, Cargo.lock e le icone.
+Su Windows con Rust e i build tools C++ installati: esegui sorgenti/BUILD.bat.
+Modifiche: build.rs e winres per le risorse Windows; icona viewport in src/main.rs.

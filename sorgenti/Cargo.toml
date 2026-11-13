@@ -1,0 +1,28 @@
+[package]
+name = "speaker-scene-director"
+version = "1.0.0"
+edition = "2021"
+authors = ["Speaker Scene Director contributors"]
+description = "Automatically switch OBS scenes based on TeamSpeak 6 voice activity"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/YOUR_USERNAME/speaker-scene-director"
+keywords = ["obs", "teamspeak", "streaming", "websocket"]
+categories = ["multimedia::video"]
+
+[dependencies]
+base64 = "0.22"
+eframe = { version = "0.31", default-features = false, features = ["default_fonts", "glow"] }
+rand = "0.8"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+tungstenite = { version = "0.24", default-features = false, features = ["handshake"] }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
+
+[build-dependencies]
+winres = "0.1"

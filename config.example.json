@@ -1,0 +1,15 @@
+{
+  "teamspeak": {"host": "127.0.0.1", "port": 5899},
+  "obs": {"host": "127.0.0.1", "port": 4455, "password": ""},
+  "participants": [
+    {"nickname": "YourNickname", "scene": "Main"},
+    {"nickname": "FriendNickname", "scene": "Friend"}
+  ],
+  "default_scene": "Main",
+  "switch_delay_ms": 500,
+  "min_scene_ms": 2500,
+  "silence_timeout_ms": 4500,
+  "release_grace_ms": 700,
+  "same_channel_only": true,
+  "log_events": false
+}
